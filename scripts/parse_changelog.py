@@ -9,7 +9,7 @@ VERSION_RE = re.compile(r'^(?P<version>[0-9]+\.[0-9]+)$')
 
 def CURRENT_CHANGELOG_RE(version: str):
     return re.compile(
-        r'(?P<current_changelog>##\s+\[' + re.escape(version) + r'\].+?)\s*(?:\n##\s+\[[0-9]+\.[0-9]+\.[0-9]+\]|$)',
+        r'(?P<current_changelog>##\s+\[' + re.escape(version) + r'\].+?)\s*(?:\n##\s+\[[0-9]+\.[0-9]+\]|$)',
         re.DOTALL
     )
 
