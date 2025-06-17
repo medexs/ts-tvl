@@ -94,6 +94,8 @@ jobs:
           asset_path: test-results.xml
           asset_name: test-results
           asset_content_type: application/xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload test coverage report
         uses: actions/upload-release-asset@v1
@@ -102,6 +104,8 @@ jobs:
           asset_path: htmlcov.zip
           asset_name: test-coverage-report
           asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload wheel
         uses: actions/upload-release-asset@v1
@@ -110,3 +114,5 @@ jobs:
           asset_path: dist/*.whl
           asset_name: ts-tvl-package
           asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
