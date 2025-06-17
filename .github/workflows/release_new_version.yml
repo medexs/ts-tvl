@@ -107,6 +107,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: cd for wheel
+        run: |
+          ls -l
+          ls -l dist/
+
       - name: Upload wheel
         uses: actions/upload-release-asset@v1
         with:
