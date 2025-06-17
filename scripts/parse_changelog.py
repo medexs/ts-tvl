@@ -5,7 +5,7 @@ import pathlib
 CHANGELOG_PATH = pathlib.Path(__file__).parent.parent.joinpath("CHANGELOG.md")
 
 # Regular expressions for searched contents
-VERSION_RE = re.compile(r'^v?(?P<version>[0-9]+\.[0-9]+)$')
+VERSION_RE = re.compile(r'^?(?P<version>[0-9]+\.[0-9]+)$')
 
 def CURRENT_CHANGELOG_RE(version: str):
     return re.compile(
