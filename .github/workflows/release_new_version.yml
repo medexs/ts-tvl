@@ -37,6 +37,11 @@ jobs:
         with:
           fetch-depth: 0  # Ensure full history is available
 
+      - name: Show current commit and tag
+        run: |
+          echo "Current commit: $(git rev-parse HEAD)"
+          echo "Tag points to: $(git rev-list -n 1 $GITHUB_REF)"
+
       - name: setup python
         id: setup_python
         uses: actions/setup-python@v5
